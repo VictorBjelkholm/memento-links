@@ -24,13 +24,11 @@ function findMatchInArray(arr, to_match) {
 var mementolinks = function(string) {
   var to_return = {};
   var rows = string.split('", ');
-  //console.log(rows);
   var keys = Object.keys(attribute_map);
   keys.forEach(function(key) {
     to_return[key] = findMatchInArray(rows, attribute_map[key]);
 
   })
-  //console.log(findMatchInArray(rows, 'first memento'));
   return to_return;
 }
 
